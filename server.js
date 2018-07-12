@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var app = require('express')();
 var handlebars = require('express-handlebars');
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 var connection;
 
 app.engine('handlebars', handlebars({ 
