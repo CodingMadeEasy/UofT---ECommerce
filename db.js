@@ -2,6 +2,8 @@ var mysql = require("mysql");
 
 function login() {
     console.log(process.env.DBHOST);
+    console.log(process.env.DBUSER);
+    console.log(process.env.DBPASSWORD);
 
     var connection = mysql.createConnection({
         host: process.env.DBHOST || "localhost",
