@@ -1,10 +1,6 @@
-var mysql = require("mysql");
+var mysql = require("mysql2");
 
 function login() {
-    console.log(process.env.DBHOST);
-    console.log(process.env.DBUSER);
-    console.log(process.env.DBPASSWORD);
-
     var connection = mysql.createConnection({
         host: process.env.DBHOST || "localhost",
         port: 3306,
